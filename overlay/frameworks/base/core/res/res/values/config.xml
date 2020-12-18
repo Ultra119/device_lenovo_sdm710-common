@@ -434,4 +434,7 @@
 
     <!-- Whether to show the Preference for Adaptive connectivity -->
     <bool name="config_show_adaptive_connectivity">false</bool>
+
+    <!-- Whether Hearing Aid profile is supported -->
+    <bool name="config_hearing_aid_profile_supported">true</bool>
 </resources>
