@@ -13,6 +13,10 @@ ro.charger.enable_suspend=true
 persist.vendor.cne.feature=1
 persist.vendor.dpmhalservice.enable=1
 
+# Color control
+ro.surface_flinger.has_wide_color_display=1
+ro.surface_flinger.use_color_management=1
+
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
