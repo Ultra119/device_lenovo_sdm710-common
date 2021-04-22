@@ -1092,3 +1092,8 @@ service vendor.thermal-hal-2-0 /vendor/bin/hw/android.hardware.thermal@2.0-servi
     group system
     priority -20
     disabled
+
+on property:sys.boot_completed=1
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
