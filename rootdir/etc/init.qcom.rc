@@ -634,9 +634,6 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     group system
     disabled
 
-on property:sys.sysctl.tcp_adv_win_scale=*
-    write /proc/sys/net/ipv4/tcp_adv_win_scale ${sys.sysctl.tcp_adv_win_scale}
-
 # Data Migration
 service vendor.move_wifi_data /system/bin/move_wifi_data.sh
     class main
