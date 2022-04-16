@@ -425,4 +425,11 @@
 
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
     <bool name="config_zramWriteback">true</bool>
+
+    <!-- Improve signal reception -->
+    <bool name="config_ignoreRssnrSignalLevel">true</bool>
+
+    <!-- Whether to show settings for hiding notch fill -->
+    <bool name="config_showHideNotchSettings">true</bool>
+
 </resources>
