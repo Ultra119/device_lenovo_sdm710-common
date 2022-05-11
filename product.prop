@@ -19,6 +19,7 @@ ro.surface_flinger.use_color_management=1
 
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.systemuicompilerfilter=speed
 
 # FM
 vendor.bluetooth.soc=cherokee
