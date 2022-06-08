@@ -14,6 +14,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- To enable display touch sensitivity switch -->
-   <bool name="config_show_touch_sensitivity">true</bool>
+   <bool name="config_show_touch_sensitivity">false</bool>
 
 </resources>
