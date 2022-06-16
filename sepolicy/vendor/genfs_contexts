@@ -6,3 +6,7 @@ genfscon proc /sys/kernel/sched_boost                 u:object_r:proc_sysctl_sch
 
 # DT2W
 genfscon sysfs /devices/virtual/touch/tp_dev/gesture_on u:object_r:sysfs_tp:s0
+
+# KProfiles
+genfscon sysfs /module/kprofiles/parameters/auto_kprofiles u:object_r:sysfs_kprofiles:s0
+genfscon sysfs /module/kprofiles/parameters/kp_mode u:object_r:sysfs_kprofiles:s0

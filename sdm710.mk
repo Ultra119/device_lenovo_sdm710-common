@@ -261,6 +261,10 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
 endif
 
+# KProfiles
+PRODUCT_PACKAGES += \
+    KProfiles
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
