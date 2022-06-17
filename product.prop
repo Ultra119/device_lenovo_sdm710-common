@@ -48,9 +48,6 @@ ro.hardware.vulkan=adreno
 # IMS
 ro.telephony.block_binder_thread_on_incoming_calls=false
 
-# IORap
-persist.device_config.runtime_native_boot.iorap_readahead_enable=true
-
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
