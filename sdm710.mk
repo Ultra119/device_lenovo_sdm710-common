@@ -460,3 +460,10 @@ VENDOR_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 
 # Set boot SPL
 BOOT_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
+
+# App launch prefetching (IORapd)
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.iorapd.enable=false \
+	iorapd.perfetto.enable=false \
+	iorapd.readahead.enable=false \
+	persist.device_config.runtime_native_boot.iorap_readahead_enable=false
