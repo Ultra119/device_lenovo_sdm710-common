@@ -41,6 +41,6 @@ void property_override_dual(char const system_prop[], char const vendor_prop[],
 
 void vendor_load_properties() {
     property_override("ro.oem_unlock_supported", "0");
-    property_override("ro.build.description", "raven-user 12 SP2A.220505.002 8353555 release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/raven/raven:12/SP2A.220505.002/8353555:user/release-keys");
+    property_override("ro.build.description", "raven-user 12 SQ3A.220605.009.B1 8650216 release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/raven/raven:12/SQ3A.220605.009.B1/8650216:user/release-keys");
 }
