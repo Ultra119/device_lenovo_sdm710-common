@@ -38,11 +38,6 @@ on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
-  # create symlink for vendor mount points
-    symlink /vendor/firmware_mnt /firmware
-    symlink /vendor/bt_firmware /bt_firmware
-    symlink /vendor/dsp /dsp
-
   # Change ownership of hw_recovery related nodes
     chown system graphics /sys/kernel/debug/dri/0/debug/dump
     chown system graphics /sys/kernel/debug/dri/0/debug/recovery_reg
@@ -464,9 +459,7 @@ on post-fs-data
 
     #copy west algo
     copy /vendor/lib/camera/model_mdl_cache     /data/vendor/camera/westalgo/model_mdl_cache
-    copy /vendor/lib/camera/cache_data          /data/vendor/camera/westalgo/cache_data
     copy /vendor/lib/camera/megviisegment_model /data/vendor/camera/westalgo/megviisegment_model
-    copy /vendor/lib/camera/upSample.model      /data/vendor/camera/westalgo/upSample.model
     chown cameraserver cameraserver /data/vendor/camera/westalgo/model_mdl_cache
     chown cameraserver cameraserver /data/vendor/camera/westalgo/cache_data
     chown cameraserver cameraserver /data/vendor/camera/westalgo/megviisegment_model
@@ -552,12 +545,6 @@ on property:sys.boot_completed=1
     #WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot
     chown media audio /sys/kernel/wcd_cpe0/fw_name
-
-on property:persist.vendor.radio.atfwd.start=false
-    stop vendor.atfwd
-
-on property:vendor.radio.atfwd.start=false
-    stop vendor.atfwd
 
 # corefile limit
 on property:persist.debug.trace=1
@@ -791,11 +778,6 @@ service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
     user root
     oneshot
 
-service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
-    class late_start
-    user root
-    oneshot
-
 service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
@@ -833,11 +815,6 @@ service qvop-daemon /vendor/bin/qvop-daemon
     class late_start
     user system
     group system drmrpc
-
-service vendor.atfwd /vendor/bin/ATFWD-daemon
-    class late_start
-    user system
-    group system radio
 
 service hostapd_fst /vendor/bin/hw/hostapd -dd -g /data/vendor/wifi/hostapd/global
     interface android.hardware.wifi.hostapd@1.0::IHostapd default
@@ -1016,11 +993,6 @@ service time_daemon /vendor/bin/time_daemon
 
 on property:ro.vendor.radio.noril=*
     setprop ro.radio.noril ${ro.vendor.radio.noril}
-
-service seemp_healthd /vendor/bin/seemp_healthd
-    class late_start
-    user system
-    group system
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
