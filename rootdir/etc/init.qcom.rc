@@ -80,7 +80,10 @@ on post-fs
     # Start services for bootanim
     start surfaceflinger
     start bootanim
+    # Try for @2.1, for legacy
     start vendor.hwcomposer-2-1
+    # Try for @2.3, for GRAPHICS_V3 devices
+    start vendor.hwcomposer-2-3
     start vendor.configstore-hal
     start vendor.qti.hardware.display.allocator
 
