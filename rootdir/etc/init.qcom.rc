@@ -30,6 +30,11 @@ import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.target.rc
 
 on early-init
+
+    # Remove some data cache
+    rm /data/resource-cache
+    rm /data/system/package_cache
+
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
 
