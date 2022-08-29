@@ -46,7 +46,7 @@ void vendor_load_properties() {
     property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/raven/raven:12/SQ3A.220605.009.B1/8650216:user/release-keys");
 	
 #ifdef __ANDROID_RECOVERY__
-    std::string buildtype = GetProperty("ro.build.type", "userdebug");
+    std::string buildtype = android::base::GetProperty("ro.build.type", "userdebug");
     if (buildtype != "user") {
         property_override("ro.debuggable", "1");
         property_override("ro.adb.secure.recovery", "0");
