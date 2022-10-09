@@ -39,6 +39,9 @@ ro.vendor.fm.use_audio_session=true
 # Gboard
 ro.com.google.ime.kb_pad_port_b=1
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # Graphics
 debug.egl.hw=1
 debug.sf.hw=1
