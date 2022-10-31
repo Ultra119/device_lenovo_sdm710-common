@@ -473,3 +473,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	iorapd.perfetto.enable=false \
 	iorapd.readahead.enable=false \
 	persist.device_config.runtime_native_boot.iorap_readahead_enable=false
+
+# Statically linked GNU parted
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/parted/parted:$(TARGET_COPY_OUT_SYSTEM)/bin/parted
