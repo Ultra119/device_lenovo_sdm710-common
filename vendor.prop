@@ -117,6 +117,7 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # Graphics
 debug.sf.auto_latch_unsignaled=true
+ro.hwui.render_ahead=20
 
 # Factory Reset Protection
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
