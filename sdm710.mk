@@ -332,7 +332,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2 \
     android.hardware.power@1.2.vendor \
     android.hardware.power-service.lenovo-sdm710-libperfmgr \
-    android.hardware.power.stats@1.0-service.lenovo
+    android.hardware.power.stats@1.0-service.mock
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
